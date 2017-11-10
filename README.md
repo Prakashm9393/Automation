@@ -24,3 +24,19 @@ Ameex’s TCoE(Testing Center of Excellence) in Test Automation will deliver the
 * Identifying the percentage of test cases which can be automated and which to continue manually.
 
 * Right approach to select the tools & framework in place etc.
+
+# Why we move to Automation?
+
+The reason we move to automation is,
+
+> Increase the effectiveness of software testing.
+
+> Perform repeated task.
+
+> Increase of test coverage. 
+
+> Increase confidence level of application.
+
+> Optimization of speed, efficiency, quality and the decrease of costs.
+
+
