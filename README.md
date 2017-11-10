@@ -39,4 +39,6 @@ The reason we move to automation is,
 
 * Optimization of speed, efficiency, quality and the decrease of costs.
 
+# POM1.0 Architecture
 
+![POM1.0-Architecture](https://github.com/AmeexTestAutomation/POM1.0/blob/master/POM-Architecture.png)
