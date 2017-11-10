@@ -14,3 +14,13 @@ Using POM1.0 test automation framework we can achieve following things,
 5.) This model makes easy to maintain the Object Repository.
 
 6.) Automation Code maintenance and reusability will be easier.
+
+# Ameex Test Automation Approach
+
+Ameex’s TCoE(Testing Center of Excellence) in Test Automation will deliver the highly reliable automation solution by understand the scope of test automation.
+
+* Defining the business/technical goals of it.
+
+* Identifying the percentage of test cases which can be automated and which to continue manually.
+
+* Right approach to select the tools & framework in place etc.
