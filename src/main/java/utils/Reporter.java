@@ -29,14 +29,14 @@ public abstract class Reporter {
 
 		// Write if it is successful or failure or information
 		if(status.toUpperCase().equals("PASS")){
-			testDriver.get(getDriver()).log(LogStatus.PASS, desc+testDriver.get(getDriver()).addScreenCapture("./../MJN_CA_Reporter/images/"+snapNumber+".jpg"));
+			testDriver.get(getDriver()).log(LogStatus.PASS, desc+testDriver.get(getDriver()).addScreenCapture("./../report/images/"+snapNumber+".jpg"));
 		}else if(status.toUpperCase().equals("FAIL")){
-			testDriver.get(getDriver()).log(LogStatus.FAIL, desc+testDriver.get(getDriver()).addScreenCapture("./../MJN_CA_Reporter/images/"+snapNumber+".jpg"));
+			testDriver.get(getDriver()).log(LogStatus.FAIL, desc+testDriver.get(getDriver()).addScreenCapture("./../report/images/"+snapNumber+".jpg"));
 			throw new RuntimeException("FAILED");
 		}else if(status.toUpperCase().equals("INFO")){
 			testDriver.get(getDriver()).log(LogStatus.INFO, desc);
 		}else if(status.toUpperCase().equals("WARN")){
-			testDriver.get(getDriver()).log(LogStatus.WARNING, desc+testDriver.get(getDriver()).addScreenCapture("./../MJN_CA_Reporter/images/"+snapNumber+".jpg"));
+			testDriver.get(getDriver()).log(LogStatus.WARNING, desc+testDriver.get(getDriver()).addScreenCapture("./../report/images/"+snapNumber+".jpg"));
 		}
 	}
 
@@ -45,7 +45,7 @@ public abstract class Reporter {
 
 	public ExtentReports startResult(){
 		testDriver = new HashMap<RemoteWebDriver, ExtentTest>();
-		extent = new ExtentReports("./MJN_CA_Reporter/result.html", false);
+		extent = new ExtentReports("./report/result.html", false);
 		extent.loadConfig(new File("./extent-config.xml"));		
 		return extent;
 	}
