@@ -27,7 +27,7 @@ public class ApplicationWrapper extends GenericWrapper{
 		
 	@AfterSuite
 	public void afterSuite(){
-		endResult();
+		endResult();		
 		stopChromeServer();
 	}
 

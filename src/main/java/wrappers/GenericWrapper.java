@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +32,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.Log;
 import utils.Reporter;
+import utils.TextFileHandler;
 
 public class GenericWrapper extends Reporter{
 
@@ -1834,5 +1837,77 @@ public class GenericWrapper extends Reporter{
 		} 
 		return bReturn;
 	}
+        
+    /**
+     * This method is used to get all links in the given site
+     * @param driver - RemoteWebDriver
+     * @return - List<WebElement> value
+     * @author Karthikeyan Rajendran on 16/01/2017:14:45:00PM
+     */
+    public List<WebElement> findAllLinks(RemoteWebDriver driver){    	
+    	List<WebElement> elementList = driver.findElements(By.tagName("a"));
+    	elementList.addAll(driver.findElements(By.tagName("img")));
+    	List<WebElement> finalList = new ArrayList<WebElement>();
+    	for (WebElement element : elementList){
+   		  if(element.getAttribute("href") != null){
+   			  finalList.add(element);
+   		  }
+   	  }
+   	  return finalList;
+    }
+    
+    /**
+     * This method is used to send response of the given link
+     * @param url - link
+     * @return - String value
+     * @author Karthikeyan Rajendran on 16/01/2017:14:45:00PM
+     * @throws Exception
+     */
+    public String isLinkBroken(URL url){
+		String response = "";		
+		try{
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		    connection.connect();
+		    response = connection.getResponseMessage();    
+		    connection.disconnect();
+		    return response;
+		}catch(Exception exp){
+			return exp.getMessage();
+		}
+	}
+    
+    /**
+     * This method is used to find the broken links in the given site
+     * @author Karthikeyan Rajendran on 16/01/2017:14:45:00PM 
+     * @throws Exception
+     */
+    public void findBrokenLinks(){
+    	List<String> brokenLinks = new ArrayList<String>();
+    	List<WebElement> elements = findAllLinks(getDriver());
+		int tLinks = elements.size();
+		int link = 0;
+		System.out.println("Total number of links to scan: " + tLinks);
+		System.out.println("Scanning For Broken Links....");
+		for (WebElement element : elements) {
+			try {
+				//System.out.println("URL: " + element.getAttribute("href")+ " returned " + isLinkBroken(new URL(element.getAttribute("href"))));				
+				String response = isLinkBroken(new URL(element.getAttribute("href")));
+				if(response.equals("OK")){
+					link++;
+				}else{
+					brokenLinks.add("URL: " + element.getAttribute("href")+ " returned " + isLinkBroken(new URL(element.getAttribute("href"))));					
+				}
+			} catch (Exception exp) {
+				brokenLinks.add("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());							
+			}
+		}		
+		if(link == tLinks){
+			System.out.println("There is no broken link in this site: "+sUrl);
+		}else{
+			int bLinks = tLinks - link;			
+			TextFileHandler.writeListOfDataIntoTheTextFile("BrokenLinks", brokenLinks);			
+			System.err.println("There are "+bLinks+" broken links in this site: "+sUrl+" . Kindly find broken links in BrokenLinks.txt file with reasons.");
+		}	
+    }
 
 }
