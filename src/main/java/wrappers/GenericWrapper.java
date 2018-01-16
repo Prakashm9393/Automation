@@ -1842,7 +1842,7 @@ public class GenericWrapper extends Reporter{
      * This method is used to get all links in the given site
      * @param driver - RemoteWebDriver
      * @return - List<WebElement> value
-     * @author Karthikeyan Rajendran on 16/01/2017:14:45:00PM
+     * @author Karthikeyan Rajendran on 16/01/2018:14:45:00PM
      */
     public List<WebElement> findAllLinks(RemoteWebDriver driver){    	
     	List<WebElement> elementList = driver.findElements(By.tagName("a"));
@@ -1860,7 +1860,7 @@ public class GenericWrapper extends Reporter{
      * This method is used to send response of the given link
      * @param url - link
      * @return - String value
-     * @author Karthikeyan Rajendran on 16/01/2017:14:45:00PM
+     * @author Karthikeyan Rajendran on 16/01/2018:14:45:00PM
      * @throws Exception
      */
     public String isLinkBroken(URL url){
@@ -1878,7 +1878,7 @@ public class GenericWrapper extends Reporter{
     
     /**
      * This method is used to find the broken links in the given site
-     * @author Karthikeyan Rajendran on 16/01/2017:14:45:00PM 
+     * @author Karthikeyan Rajendran on 16/01/2018:14:45:00PM 
      * @throws Exception
      */
     public void findBrokenLinks(){
