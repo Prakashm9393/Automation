@@ -3,7 +3,6 @@ package utils;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -20,10 +19,7 @@ public class ExcelDataUtility{
 	 String xlFilePath;
 	 
 	 public ExcelDataUtility(String xlFilePath) throws Exception{
-		//Log4j Configuration XML file 	
-		DOMConfigurator.configure("log4j.xml"); 
-		
-	    this.xlFilePath = xlFilePath;
+		this.xlFilePath = xlFilePath;
         fis = new FileInputStream(xlFilePath);
         workbook = new XSSFWorkbook(fis);
         fis.close();		   

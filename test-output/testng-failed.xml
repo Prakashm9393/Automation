@@ -7,13 +7,7 @@
         <methods>
           <include name="afterClass"/>
           <include name="checkTC001"/>
-          <include name="afterTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
           <include name="beforeClass"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="afterSuite"/>
         </methods>
       </class> <!-- testcases.TC001 -->
     </classes>
