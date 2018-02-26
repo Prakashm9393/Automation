@@ -33,14 +33,12 @@ public class ApplicationWrapper extends GenericWrapper{
 
 	@AfterTest
 	public void afterTest(){
-		
+		endTestcase();
 	}
 	
 	@AfterMethod
 	public void afterMethod(){
-		endTestcase();		
-	}
+				
+	}	
 	
-	
-
 }

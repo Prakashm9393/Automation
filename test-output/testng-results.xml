@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="235635" started-at="2018-02-26T14:15:47Z" finished-at="2018-02-26T14:19:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="235635" started-at="2018-02-26T14:15:47Z" finished-at="2018-02-26T14:19:43Z">
+      <class name="testcases.TC001">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC001@536aaa8d]" name="beforeSuite" is-config="true" duration-ms="2573" started-at="2018-02-26T19:45:45Z" finished-at="2018-02-26T19:45:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC001@536aaa8d]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-02-26T19:45:47Z" finished-at="2018-02-26T19:45:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.TC001@536aaa8d]" name="beforeClass" is-config="true" duration-ms="41576" started-at="2018-02-26T19:45:47Z" finished-at="2018-02-26T19:46:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-02-26T19:46:29Z" finished-at="2018-02-26T19:46:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="checkTC001()[pri:0, instance:testcases.TC001@536aaa8d]" name="checkTC001" duration-ms="194016" started-at="2018-02-26T19:46:29Z" finished-at="2018-02-26T19:49:43Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[FAILED]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: FAILED
+	at utils.Reporter.reportStep(Reporter.java:35)
+	at wrappers.GenericWrapper.scrollToTheGivenWebElement(GenericWrapper.java:1706)
+	at testcases.TC001.checkTC001(TC001.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTC001 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.TC001@536aaa8d]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-02-26T19:49:43Z" finished-at="2018-02-26T19:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001@536aaa8d]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-02-26T19:49:43Z" finished-at="2018-02-26T19:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC001@536aaa8d]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-26T19:49:43Z" finished-at="2018-02-26T19:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC001@536aaa8d]" name="afterSuite" is-config="true" duration-ms="301" started-at="2018-02-26T19:49:43Z" finished-at="2018-02-26T19:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testcases.TC001 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -141,7 +141,7 @@ public class GenericWrapper extends Reporter{
 			gw.driver = driver;
 			setDriver(gw);
 			
-			getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			getDriver().get(sUrl);
 			Log.info("Successfully launched "+sUrl+" application on the "+browser+" browser.");
 		} catch (Exception e) {

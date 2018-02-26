@@ -1,0 +1,49 @@
+2018-02-26 19:00:05,490 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:02:17,839 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:03:09,033 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:03:56,290 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:10:25,098 INFO  [Log] Successfully closed the browsers. 
+2018-02-26 19:10:26,020 INFO  [Log] Stoping Chrome Server. 
+2018-02-26 19:15:36,127 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:16:12,267 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:18:06,906 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:18:43,475 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:20:57,995 ERROR [Log] Unable to find the className : lookupred in the DOM elements. org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: lookupred (tried for 10 second(s) with 500 MILLISECONDS interval) 
+2018-02-26 19:20:58,583 INFO  [Log] Successfully closed the browsers. 
+2018-02-26 19:20:59,043 INFO  [Log] Stoping Chrome Server. 
+2018-02-26 19:27:03,032 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:27:39,190 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:30:01,345 ERROR [Log] Unable to find the className : lookupred in the DOM elements. org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: lookupred (tried for 10 second(s) with 500 MILLISECONDS interval) 
+2018-02-26 19:30:01,754 INFO  [Log] Successfully closed the browsers. 
+2018-02-26 19:30:02,435 INFO  [Log] Stoping Chrome Server. 
+2018-02-26 19:30:52,356 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:31:28,643 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:34:41,896 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:35:20,024 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:36:55,234 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:37:31,546 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:39:30,884 ERROR [Log] Unable to find the xpath : //div[@class='lookupred'] in the DOM elements. org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='lookupred'] (tried for 10 second(s) with 500 MILLISECONDS interval) 
+2018-02-26 19:39:31,899 INFO  [Log] Stoping Chrome Server. 
+2018-02-26 19:43:22,285 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:43:59,319 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:45:13,515 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:45:17,376 FATAL [Log] Unable to launch application http://www.ip-tracker.org/checker/email-lookup.php in the firefox browser.org.openqa.selenium.SessionNotCreatedException: Unable to find a matching set of capabilities
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'AMX-638', ip: '10.10.4.105', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: stack backtrace:
+   0:           0x47e934 - <no info>
+   1:           0x47f0a3 - <no info>
+   2:           0x442511 - <no info>
+   3:           0x4436da - <no info>
+   4:           0x42a890 - <no info>
+   5:           0x406f5e - <no info>
+   6:           0x40cfc9 - <no info>
+   7:           0x6bef19 - <no info>
+   8:           0x420756 - <no info>
+   9:           0x6b96e0 - <no info>
+  10:         0x7763652d - BaseThreadInitThunk 
+2018-02-26 19:45:47,618 INFO  [Log] Starting ChromeDriver on 9515. Only local connections are allowed. 
+2018-02-26 19:46:29,214 INFO  [Log] Successfully launched http://www.ip-tracker.org/checker/email-lookup.php application on the Chrome browser. 
+2018-02-26 19:49:42,976 ERROR [Log] Unable to find the xpath : //div[@id='maincontent']/table/tbody/tr[8]/td//div[2] in the DOM elements. org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='maincontent']/table/tbody/tr[8]/td//div[2] (tried for 10 second(s) with 500 MILLISECONDS interval) 
+2018-02-26 19:49:43,577 INFO  [Log] Stoping Chrome Server. 
