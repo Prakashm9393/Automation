@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import utils.ExcelDataUtility;
+import utils.ReadPropertiesFiles;
 
 public class TC001{
 	
@@ -20,23 +21,24 @@ public class TC001{
 	@BeforeClass
 	public void beforeClass() throws IOException{
 		Runtime.getRuntime().exec("./driver/chromedriver.exe", null, new File("./driver"));
-		System.err.println("Starting ChromeDriver on 9515. Only local connections are allowed.");		
+		System.err.println("Starting ChromeDriver on 9515. Only local connections are allowed.");
+		ReadPropertiesFiles.loadConfingFile();
 	}
 	
 	@Test
 	public void checkTC001() throws Exception{
-		ExcelDataUtility data = new ExcelDataUtility("./data/Mail_Campaign_Two.xlsx");
-		for (int i = 100; i <= data.getTotalRowNumber("Sheet1"); i++){
+		ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");
+		for (int i = 99; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){
 			driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
 			driver.get("http://www.ip-tracker.org/checker/email-lookup.php");
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			String email = data.getCellData("Sheet1", 0, i);
-			driver.findElementById("txtOne").sendKeys(email);
-			driver.findElementByClassName("inputinyext").click();		
+			String email = data.getCellData(ReadPropertiesFiles.SheetName, 0, i);
+			driver.findElementById(ReadPropertiesFiles.MailIdLocate).sendKeys(email);
+			driver.findElementByClassName(ReadPropertiesFiles.NextBut).click();		
 			Thread.sleep(3000);
-			String msg = driver.findElementByXPath("//div[@id='maincontent']/table/tbody/tr[8]/td//div[@class]").getText();			
-			data.setCellData("Sheet1", 1, i, msg);
+			String msg = driver.findElementByXPath(ReadPropertiesFiles.MsgeBox).getText();			
+			data.setCellData(ReadPropertiesFiles.SheetName, 1, i, msg);
 			driver.close();
 		}		
 	}
