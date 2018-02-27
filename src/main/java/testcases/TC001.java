@@ -25,7 +25,7 @@ public class TC001{
 	
 	@Test
 	public void checkTC001() throws Exception{
-		ExcelDataUtility data = new ExcelDataUtility("./data/Mail_Campaign_One.xlsx");
+		ExcelDataUtility data = new ExcelDataUtility("./data/Mail_Campaign_Two.xlsx");
 		for (int i = 1; i < data.getTotalRowNumber("Sheet1"); i++){
 			driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
