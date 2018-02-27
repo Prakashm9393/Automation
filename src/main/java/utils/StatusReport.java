@@ -62,10 +62,8 @@ public class StatusReport implements IReporter{
 				boolean val = failedMethods.isEmpty();
 				
 				if(val){
-					SendMail.sendAttachmentMail();
-					SendMail.sendSuccessMail();					
-				}else{	
-					SendMail.sendAttachmentMail();
+					SendMail.sendAttachmentMail();										
+				}else{					
 					SendMail.sendFailureMail();					
 				}
 

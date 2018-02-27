@@ -138,7 +138,7 @@ public class AutomaticSendMail {
             objMessageBodyPart = new MimeBodyPart();
 
             //Set path to the report file
-            String filePath = "./testcases/"+filename+".xlsx";
+            String filePath = "./data/"+filename+".xlsx";
             
             //Create data source to attach the file in mail
             DataSource source = new FileDataSource(filePath);
