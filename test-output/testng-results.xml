@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-02-27T12:20:26Z" name="Default suite" finished-at="2018-02-27T12:23:26Z" duration-ms="180464">
+  <suite name="Default suite" duration-ms="17282" started-at="2018-02-28T06:50:38Z" finished-at="2018-02-28T06:50:56Z">
     <groups>
     </groups>
-    <test started-at="2018-02-27T12:20:26Z" name="Default test" finished-at="2018-02-27T12:23:26Z" duration-ms="180464">
-      <class name="testcases.TC001">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.TC001@2638011]" started-at="2018-02-27T17:50:26Z" name="beforeClass" finished-at="2018-02-27T17:50:26Z" duration-ms="34" status="PASS">
+    <test name="Default test" duration-ms="17282" started-at="2018-02-28T06:50:38Z" finished-at="2018-02-28T06:50:56Z">
+      <class name="testcases.TC003">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.TC003@548e7350]" name="beforeClass" is-config="true" duration-ms="2523" started-at="2018-02-28T12:20:38Z" finished-at="2018-02-28T12:20:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="checkTC001()[pri:0, instance:testcases.TC001@2638011]" started-at="2018-02-27T17:50:26Z" name="checkTC001" finished-at="2018-02-27T17:53:26Z" duration-ms="180373" status="PASS">
+        <test-method status="PASS" signature="checkTC001()[pri:0, instance:testcases.TC003@548e7350]" name="checkTC001" duration-ms="14733" started-at="2018-02-28T12:20:41Z" finished-at="2018-02-28T12:20:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTC001 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testcases.TC001@2638011]" started-at="2018-02-27T17:53:26Z" name="afterClass" finished-at="2018-02-27T17:53:26Z" duration-ms="41" status="PASS">
+        <test-method status="PASS" signature="checkTC001()[pri:0, instance:testcases.TC003@548e7350]" name="checkTC001" duration-ms="9440" started-at="2018-02-28T12:20:41Z" finished-at="2018-02-28T12:20:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- testcases.TC001 -->
+        </test-method> <!-- checkTC001 -->
+      </class> <!-- testcases.TC003 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

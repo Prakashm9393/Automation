@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import utils.ReadPropertiesFiles;
 
-public class TC003 {
+public class TC003{	
 	
 	@BeforeClass
 	public void beforeClass(){
@@ -13,10 +13,10 @@ public class TC003 {
 	}
 	
 	@Test
-	public void checkTC001(){		
+	public void checkTC001() throws Exception{		
 		System.out.println(ReadPropertiesFiles.Aut);
 		System.out.println(ReadPropertiesFiles.FileName);
-		System.out.println(ReadPropertiesFiles.SheetName);
+		System.out.println(ReadPropertiesFiles.SheetName);				
 	}
 
 }
