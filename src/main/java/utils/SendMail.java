@@ -17,7 +17,7 @@ public class SendMail extends AutomaticSendMail {
 	public static void sendSuccessMail(){
 		Properties prop = new Properties();
 		try {
-			prop.load(new FileInputStream(new File("./mail.properties")));
+			prop.load(new FileInputStream(new File("./config.properties")));
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (IOException e1) {
@@ -35,7 +35,7 @@ public class SendMail extends AutomaticSendMail {
 	public static void sendFailureMail(){
 		Properties prop = new Properties();
 		try {
-			prop.load(new FileInputStream(new File("./mail.properties")));
+			prop.load(new FileInputStream(new File("./config.properties")));
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (IOException e1) {
@@ -45,7 +45,7 @@ public class SendMail extends AutomaticSendMail {
 		Date date = new Date();
 		String time = dateFormat.format(date);
 		System.out.println("Sending....");
-		sendFailureReportByGmail(prop.getProperty("Automation.Mail.To"), prop.getProperty("Automation.Mail.Subject"),time);
+		sendFailureReportByGmail(prop.getProperty("Automation.Mail.Cc"), prop.getProperty("Automation.Mail.Subject"),time);
 		System.out.println("Sent.");
 	}
 	
@@ -53,7 +53,7 @@ public class SendMail extends AutomaticSendMail {
 	public static void sendAttachmentMail(){
 		Properties prop = new Properties();
 		try {
-			prop.load(new FileInputStream(new File("./mail.properties")));
+			prop.load(new FileInputStream(new File("./config.properties")));
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (IOException e1) {
@@ -63,7 +63,7 @@ public class SendMail extends AutomaticSendMail {
 		Date date = new Date();
 		String time = dateFormat.format(date);
 		System.out.println("Sending....");
-		sendAttachmentReport(prop.getProperty("Automation.Mail.To"), prop.getProperty("Automation.Mail.Subject"), prop.getProperty("Automation.Mail.Body.Text"), prop.getProperty("Automation.Mail.FileName"), time);
+		sendAttachmentReport(prop.getProperty("Automation.Mail.To"), prop.getProperty("Automation.Mail.Cc"), prop.getProperty("Automation.Mail.Subject"), prop.getProperty("Automation.Mail.Body.Text"), prop.getProperty("ExcelFilename"), time);
 		System.out.println("Sent.");
 	}
 
