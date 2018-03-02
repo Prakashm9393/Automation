@@ -29,7 +29,7 @@ public class TC001{
 	@Test
 	public void checkTC001() throws Exception{
 		ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");
-		for (int i = 141; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){
+		for (int i = 435; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){
 			driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
 			driver.get("http://www.ip-tracker.org/checker/email-lookup.php");
