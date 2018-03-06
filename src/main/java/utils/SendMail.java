@@ -63,7 +63,7 @@ public class SendMail extends AutomaticSendMail {
 		Date date = new Date();
 		String time = dateFormat.format(date);
 		System.out.println("Sending....");
-		sendAttachmentReport(prop.getProperty("Automation.Mail.To"), prop.getProperty("Automation.Mail.Cc"), prop.getProperty("Automation.Mail.Subject"), prop.getProperty("Automation.Mail.Body.Text"), prop.getProperty("ExcelFilename"), time);
+		sendAttachmentReport(prop.getProperty("Automation.Mail.To"), prop.getProperty("Automation.Mail.Cc"), prop.getProperty("Automation.mail.Cc1"), prop.getProperty("Automation.Mail.Subject"), prop.getProperty("Automation.Mail.Body.Text"), prop.getProperty("ExcelFilename"), time);
 		System.out.println("Sent.");
 	}
 
