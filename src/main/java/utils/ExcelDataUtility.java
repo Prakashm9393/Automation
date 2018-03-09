@@ -47,6 +47,7 @@ public class ExcelDataUtility{
 			cell.setCellValue(value);			
 			fos = new FileOutputStream(xlFilePath);
 			workbook.write(fos);
+			System.out.println("Data entered into the Excel sheet.");
 			fos.close();
 		}catch (Exception ex){
 			ex.printStackTrace();

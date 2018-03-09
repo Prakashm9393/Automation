@@ -35,10 +35,10 @@ public class TC001{
 			driver.get("http://www.ip-tracker.org/checker/email-lookup.php");
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			String email = data.getCellData(ReadPropertiesFiles.SheetName, 0, i);
-			driver.findElementById(ReadPropertiesFiles.MailIdLocate).sendKeys(email);
-			driver.findElementByClassName(ReadPropertiesFiles.NextBut).click();		
+			driver.findElementById(ReadPropertiesFiles.MailIdLocate_TC1).sendKeys(email);
+			driver.findElementByClassName(ReadPropertiesFiles.NextBut_TC1).click();		
 			Thread.sleep(3000);
-			String msg = driver.findElementByXPath(ReadPropertiesFiles.MsgeBox).getText();			
+			String msg = driver.findElementByXPath(ReadPropertiesFiles.MsgeBox_TC1).getText();			
 			data.setCellData(ReadPropertiesFiles.SheetName, 1, i, msg);	
 			driver.close();
 		}		

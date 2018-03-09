@@ -11,9 +11,15 @@ public class ReadPropertiesFiles {
 	public static String Aut = null;
 	public static String FileName = null;
 	public static String SheetName = null;
-	public static String MailIdLocate = null;
-	public static String NextBut = null;
+	public static String MailIdLocate_TC1 = null;
+	public static String NextBut_TC1 = null;
+	public static String MsgeBox_TC1 = null;
+	public static String MailIdLocate_TC2 = null;
+	public static String NextBut_TC2 = null;
+	public static String MsgeBox2_TC2_1 = null;
+	public static String MsgeBox2_TC2_2 = null;
 	public static String MsgeBox = null;
+	public static String MsgeBox_TC2_1 = null;
 	
 	public static void loadConfingFile(){
 		Properties prop = new Properties();
@@ -29,10 +35,15 @@ public class ReadPropertiesFiles {
 			
 			input = new FileInputStream("objects.properties");
 			prop2.load(input);
-			MailIdLocate = prop2.getProperty("mailid");
-			NextBut = prop2.getProperty("next");
-			MsgeBox = prop2.getProperty("msge");
-			
+			MailIdLocate_TC1 = prop2.getProperty("TC001.mailid");
+			NextBut_TC1 = prop2.getProperty("TC001.next");
+			MsgeBox_TC1 = prop2.getProperty("TC001.msge1");
+			MailIdLocate_TC2 = prop2.getProperty("TC002.mailid");
+			NextBut_TC2 = prop2.getProperty("TC002.next");
+			MsgeBox2_TC2_1 = prop2.getProperty("TC002.msge2_1");
+			MsgeBox2_TC2_2 = prop2.getProperty("TC002.msge2_2");
+			MsgeBox = prop2.getProperty("TC002.msgBox");
+			MsgeBox_TC2_1 = prop2.getProperty("TC002.msge1");
 		}
 		catch(FileNotFoundException e){
 			e.printStackTrace();
