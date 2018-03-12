@@ -20,6 +20,7 @@ public class ReadPropertiesFiles {
 	public static String MsgeBox2_TC2_2 = null;
 	public static String MsgeBox = null;
 	public static String MsgeBox_TC2_1 = null;
+	public static String MsgeBox_TC3 = null;
 	
 	public static void loadConfingFile(){
 		Properties prop = new Properties();
@@ -44,6 +45,7 @@ public class ReadPropertiesFiles {
 			MsgeBox2_TC2_2 = prop2.getProperty("TC002.msge2_2");
 			MsgeBox = prop2.getProperty("TC002.msgBox");
 			MsgeBox_TC2_1 = prop2.getProperty("TC002.msge1");
+			MsgeBox_TC3 = prop2.getProperty("TC002.msge3");
 		}
 		catch(FileNotFoundException e){
 			e.printStackTrace();
