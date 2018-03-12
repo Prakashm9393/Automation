@@ -22,17 +22,18 @@ public class TC002{
 		public void beforeClass() throws IOException{
 			Runtime.getRuntime().exec("./driver/chromedriver.exe", null, new File("./driver"));
 			System.err.println("Starting ChromeDriver on 9515. Only local connections are allowed.");
-			driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
-			driver.manage().window().maximize();
-			driver.get("https://whatcms.org/");
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
 			ReadPropertiesFiles.loadConfingFile();			
 		}
 		
 		@Test
 		public void checkTC001() throws Exception{
 			ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");
-			for (int i = 1; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){				
+			for (int i = 70; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){				
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
+				driver.manage().window().maximize();
+				driver.get("https://whatcms.org/");
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				String email = data.getCellData(ReadPropertiesFiles.SheetName, 0, i);
 				driver.findElementById(ReadPropertiesFiles.MailIdLocate_TC2).sendKeys(email);
 				driver.findElementByClassName(ReadPropertiesFiles.NextBut_TC2).click();		
@@ -46,14 +47,15 @@ public class TC002{
 					String c = a+" "+b;
 					data.setCellData(ReadPropertiesFiles.SheetName, 1, i, c);
 				}				
-				driver.findElementById(ReadPropertiesFiles.MailIdLocate_TC2).clear();
+				// driver.findElementById(ReadPropertiesFiles.MailIdLocate_TC2).clear();
+				driver.close();
 			}
 			
 		}
 		
 		@AfterClass
 		public void afterClass() throws IOException{
-			driver.close();
+			
 			Runtime.getRuntime().exec("taskkill /F /IM " + "chromedriver.exe");	
 		}
 
