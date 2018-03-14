@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-03-12T10:16:57Z" name="Run_Email_Lookup_Test_Suite" finished-at="2018-03-12T10:16:58Z" duration-ms="1344">
+  <suite started-at="2018-03-13T05:39:10Z" name="Run_Email_Lookup_Test_Suite" finished-at="2018-03-14T05:40:08Z" duration-ms="86457397">
     <groups>
     </groups>
-    <test started-at="2018-03-12T10:16:57Z" name="Run_Email_Lookup_Testcases" finished-at="2018-03-12T10:16:58Z" duration-ms="1344">
+    <test started-at="2018-03-13T05:39:10Z" name="Run_Email_Lookup_Testcases" finished-at="2018-03-14T05:40:08Z" duration-ms="86457397">
       <class name="testcases.TC002">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.TC002@683dbc2c]" started-at="2018-03-12T15:46:57Z" name="beforeClass" finished-at="2018-03-12T15:46:57Z" duration-ms="266" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.TC002@683dbc2c]" started-at="2018-03-13T11:09:10Z" name="beforeClass" finished-at="2018-03-13T11:09:11Z" duration-ms="937" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="checkTC001()[pri:0, instance:testcases.TC002@683dbc2c]" started-at="2018-03-12T15:46:57Z" name="checkTC001" finished-at="2018-03-12T15:46:58Z" duration-ms="1047" status="PASS">
+        <test-method signature="checkTC001()[pri:0, instance:testcases.TC002@683dbc2c]" started-at="2018-03-13T11:09:11Z" name="checkTC001" finished-at="2018-03-14T11:10:08Z" duration-ms="86456429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTC001 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testcases.TC002@683dbc2c]" started-at="2018-03-12T15:46:58Z" name="afterClass" finished-at="2018-03-12T15:46:58Z" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testcases.TC002@683dbc2c]" started-at="2018-03-14T11:10:08Z" name="afterClass" finished-at="2018-03-14T11:10:08Z" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
