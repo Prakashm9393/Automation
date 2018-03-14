@@ -105,7 +105,7 @@ public class AutomaticSendMail {
 		}
 	}
 	
-	public static void sendAttachmentReport(String to,String cc,String cc1,String subject,String body,String filename,String time){
+	public static void sendAttachmentReport(String to,String cc,String cc1,String cc2,String subject,String body,String filename,String time){
 		Properties prop = new Properties();
 		String host = "smtp.gmail.com";
 		String from = "seleniumautomationmail.ameex@gmail.com";
@@ -125,6 +125,7 @@ public class AutomaticSendMail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.addRecipient(Message.RecipientType.CC, new InternetAddress(cc));
             message.addRecipient(Message.RecipientType.CC, new InternetAddress(cc1));
+            message.addRecipient(Message.RecipientType.CC, new InternetAddress(cc2));
            //Set subject
             message.setSubject(subject+" : "+time);
             message.setText("On "+time+" "+body);
