@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Run_Email_Lookup_Test_Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="utils.StatusReport"/>
-  </listeners>
-  <test name="Run_Email_Lookup_Testcases(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
       <class name="testcases.TC002">
         <methods>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="checkTC001"/>
+          <include name="checkTC002"/>
         </methods>
       </class> <!-- testcases.TC002 -->
     </classes>
-  </test> <!-- Run_Email_Lookup_Testcases(failed) -->
-</suite> <!-- Failed suite [Run_Email_Lookup_Test_Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
