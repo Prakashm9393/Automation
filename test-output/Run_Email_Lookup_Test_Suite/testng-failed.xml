@@ -10,7 +10,7 @@
         <methods>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="checkTC001"/>
+          <include name="checkTC002"/>
         </methods>
       </class> <!-- testcases.TC002 -->
     </classes>
