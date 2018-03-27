@@ -28,7 +28,7 @@ public class TC002{
 		@Test
 		public void checkTC002() throws Exception{
 			ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");
-			for (int i = 3291; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){				
+			for (int i = 14279; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){				
 				driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
 				driver.manage().window().maximize();
 				driver.get("https://whatcms.org/");
