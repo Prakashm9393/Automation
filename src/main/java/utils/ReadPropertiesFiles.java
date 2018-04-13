@@ -38,7 +38,7 @@ public class ReadPropertiesFiles {
 			prop2.load(input);
 			MailIdLocate_TC1 = prop2.getProperty("TC001.mailid");
 			NextBut_TC1 = prop2.getProperty("TC001.next");
-			MsgeBox_TC1 = prop2.getProperty("TC001.msge1");
+			MsgeBox_TC1 = prop2.getProperty("TC001.msge");
 			MailIdLocate_TC2 = prop2.getProperty("TC002.mailid");
 			NextBut_TC2 = prop2.getProperty("TC002.next");
 			MsgeBox2_TC2_1 = prop2.getProperty("TC002.msge2_1");
