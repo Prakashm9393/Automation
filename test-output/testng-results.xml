@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-04-13T10:31:04Z" name="Default suite" finished-at="2018-04-13T10:31:17Z" duration-ms="13092">
+  <suite started-at="2018-04-13T11:33:54Z" name="Run_Email_Lookup_Test_Suite" finished-at="2018-04-13T12:02:26Z" duration-ms="1711748">
     <groups>
     </groups>
-    <test started-at="2018-04-13T10:31:04Z" name="Default test" finished-at="2018-04-13T10:31:17Z" duration-ms="13092">
-      <class name="utils.SendMail">
-        <test-method signature="sendAttachmentMail()[pri:0, instance:utils.SendMail@5609159b]" started-at="2018-04-13T16:01:04Z" name="sendAttachmentMail" finished-at="2018-04-13T16:01:17Z" duration-ms="13072" status="PASS">
+    <test started-at="2018-04-13T11:33:54Z" name="Run_Email_Lookup_Testcases" finished-at="2018-04-13T12:02:26Z" duration-ms="1711748">
+      <class name="testcases.TC001">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.TC001@568ff82]" started-at="2018-04-13T17:03:54Z" name="beforeClass" finished-at="2018-04-13T17:04:13Z" duration-ms="18800" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sendAttachmentMail -->
-      </class> <!-- utils.SendMail -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeClass -->
+        <test-method signature="checkTC001()[pri:0, instance:testcases.TC001@568ff82]" started-at="2018-04-13T17:04:13Z" name="checkTC001" finished-at="2018-04-13T17:32:26Z" duration-ms="1692365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTC001 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testcases.TC001@568ff82]" started-at="2018-04-13T17:32:26Z" name="afterClass" finished-at="2018-04-13T17:32:26Z" duration-ms="568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- testcases.TC001 -->
+    </test> <!-- Run_Email_Lookup_Testcases -->
+  </suite> <!-- Run_Email_Lookup_Test_Suite -->
 </testng-results>

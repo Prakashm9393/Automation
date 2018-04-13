@@ -35,7 +35,7 @@ public class TC001{
 	@Test
 	public void checkTC001() throws Exception{
 		ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");
-		for (int i = 194; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){			
+		for (int i = 1; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){			
 			System.out.println(i+" record starts running...");			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtOne")));
 			String email = data.getCellData(ReadPropertiesFiles.SheetName, 0, i);
