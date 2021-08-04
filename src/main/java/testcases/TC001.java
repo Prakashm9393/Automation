@@ -22,19 +22,18 @@ public class TC001{
 	
 	@BeforeClass
 	public void beforeClass() throws IOException{
-		ReadPropertiesFiles.loadConfingFile();
-		ReadPropertiesFiles.loadConfingFile();
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");  
+		ReadPropertiesFiles.loadConfingFile();		
+	    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");  
 		ChromeOptions options = new ChromeOptions();  
 		options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");  
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver(options);	    
 		wait = new WebDriverWait(driver, 10);
 		driver.get(ReadPropertiesFiles.Aut);
 	}
 	
 	@Test
 	public void checkTC001() throws Exception{
-		ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");
+		ExcelDataUtility data = new ExcelDataUtility("./data/"+ReadPropertiesFiles.FileName+".xlsx");		
 		for (int i = 1; i <= data.getTotalRowNumber(ReadPropertiesFiles.SheetName); i++){			
 			System.out.println(i+" record starts running...");			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtOne")));
@@ -45,9 +44,13 @@ public class TC001{
 				data.setCellData(ReadPropertiesFiles.SheetName, 1, i, "500 Internal Server Error");
 				driver.get(ReadPropertiesFiles.Aut);
 			}else{
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ReadPropertiesFiles.MsgeBox_TC1)));
-				String msg = driver.findElementByXPath(ReadPropertiesFiles.MsgeBox_TC1).getText();			
-				data.setCellData(ReadPropertiesFiles.SheetName, 1, i, msg);
+				try{
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ReadPropertiesFiles.MsgeBox_TC1)));
+					String msg = driver.findElementByXPath(ReadPropertiesFiles.MsgeBox_TC1).getText();			
+					data.setCellData(ReadPropertiesFiles.SheetName, 1, i, msg);
+				}catch(Exception e){					
+					data.setCellData(ReadPropertiesFiles.SheetName, 1, i, "Unable to find the element "+ReadPropertiesFiles.MsgeBox_TC1+" :"+e.toString());
+				}
 			}
 			
 						

@@ -6,7 +6,7 @@
   </listeners>
   <test thread-count="5" name="Run_Email_Lookup_Testcases">
     <classes>
-      <class name="testcases.TC001"/>
+      <class name="testcases.TC002"/>
     </classes>
   </test> <!-- Run_Email_Lookup_Testcases -->
 </suite> <!-- Run_Email_Lookup_Test_Suite -->

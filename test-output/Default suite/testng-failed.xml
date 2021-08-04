@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TC001">
+      <class name="testcases.TC002">
         <methods>
           <include name="afterClass"/>
-          <include name="checkTC001"/>
           <include name="beforeClass"/>
+          <include name="checkTC002"/>
         </methods>
-      </class> <!-- testcases.TC001 -->
+      </class> <!-- testcases.TC002 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

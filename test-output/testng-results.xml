@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-04-13T11:33:54Z" name="Run_Email_Lookup_Test_Suite" finished-at="2018-04-13T12:02:26Z" duration-ms="1711748">
+  <suite name="Default suite" duration-ms="4820880" started-at="2019-12-12T15:45:22Z" finished-at="2019-12-12T17:05:43Z">
     <groups>
     </groups>
-    <test started-at="2018-04-13T11:33:54Z" name="Run_Email_Lookup_Testcases" finished-at="2018-04-13T12:02:26Z" duration-ms="1711748">
-      <class name="testcases.TC001">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testcases.TC001@568ff82]" started-at="2018-04-13T17:03:54Z" name="beforeClass" finished-at="2018-04-13T17:04:13Z" duration-ms="18800" status="PASS">
+    <test name="Default test" duration-ms="4820880" started-at="2019-12-12T15:45:22Z" finished-at="2019-12-12T17:05:43Z">
+      <class name="testcases.TC002">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.TC002@14bf9759]" name="beforeClass" is-config="true" duration-ms="4805" started-at="2019-12-12T15:45:23Z" finished-at="2019-12-12T15:45:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="checkTC001()[pri:0, instance:testcases.TC001@568ff82]" started-at="2018-04-13T17:04:13Z" name="checkTC001" finished-at="2018-04-13T17:32:26Z" duration-ms="1692365" status="PASS">
+        <test-method status="PASS" signature="checkTC002()[pri:0, instance:testcases.TC002@14bf9759]" name="checkTC002" duration-ms="4815342" started-at="2019-12-12T15:45:27Z" finished-at="2019-12-12T17:05:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkTC001 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testcases.TC001@568ff82]" started-at="2018-04-13T17:32:26Z" name="afterClass" finished-at="2018-04-13T17:32:26Z" duration-ms="568" status="PASS">
+        </test-method> <!-- checkTC002 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:testcases.TC002@14bf9759]" name="afterClass" is-config="true" duration-ms="708" started-at="2019-12-12T17:05:43Z" finished-at="2019-12-12T17:05:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- testcases.TC001 -->
-    </test> <!-- Run_Email_Lookup_Testcases -->
-  </suite> <!-- Run_Email_Lookup_Test_Suite -->
+      </class> <!-- testcases.TC002 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
